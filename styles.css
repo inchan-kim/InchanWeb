@@ -103,6 +103,11 @@ main {
   margin-bottom: 2.5rem;
 }
 
+/* Reverse hero layout for index: photo left, text right */
+.hero-reversed {
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 2.2fr);
+}
+
 .hero-text h1 {
   font-size: 2.1rem;
   margin: 0 0 0.35rem;
@@ -262,6 +267,26 @@ section h2 {
   text-decoration: none;
 }
 
+/* External profiles horizontal layout */
+
+.external-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.external-links a {
+  border-bottom: 1px solid transparent;
+}
+
+.external-links a:hover,
+.external-links a:focus {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
 /* On My Mind */
 
 .post-list {
@@ -337,7 +362,8 @@ footer {
     font-size: 0.85rem;
   }
 
-  .hero {
+  .hero,
+  .hero-reversed {
     grid-template-columns: minmax(0, 1fr);
   }
 
